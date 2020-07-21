@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">                                                     <!-- Element racine du document -->
+
+<head>                                                               <!-- Founit des informations au navigateur -->
+
+    <meta charset="UTF-8">                                           <!-- "meta" fait partit des balises orphelines -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">   <!-- "User-scalable=no"  Permet d'empécher l'utilisateur de zoomer-->
+    <title>My Little Company</title>                                 <!-- Titre dans l'onglet du navigateur -->
+    <link href="assets/css/styles.css" rel="stylesheet">             <!-- Lier une feuille de style -->
+
+</head>
+
+<body>                                                               <!-- Contenus visible du document-->
+
+    <div id="page-container">
+
+        <header>                                                     <!-- Entête de la page -->
+            <a href="#" title="Retour à l'acceuil">
+                <img src="img/codev19.jpeg" width="100px" alt="Logo du groupe Dev Web & Mobile">
+            </a>
+                <h1>My Little Company - Société de Services !</h1>               <!-- Titre de niveau 1 (Heading lvl one) -->
+            <p>                                                              <!-- Paragraphe de contenu -->
+                <strong>My Little Company</strong> est une <em>socété de services du Numérique.</em>
+            </p>
+
+            <!-- Navigation dans nos pages et / ou différentes sections du document courant -->
+            <nav>
+                <ul class="nopuce">                             <!-- Collection de lignes i.e conteneur de lignes -->
+                    <li class="btn-menu">
+                        <a href="#" title="Retour à la page d'acceuil">Acceuil</a>
+                    </li>
+                    <li class="btn-menu">
+                        <a href="#development" title="Développement d'application">Développement</a>
+                    </li>
+                </ul>
+            </nav>
+    
+        </header>
+
+        <main>                              <!-- Contenu principal d'un document -->
+            <section>
+                <article>
+                    <header>
+                        <h2>Développement</h2>
+                    </header>
+                    <p id="developpment">My Little Company propose une gamme de développement sur mesure...</p>
+                    <figure>
+                        <img src="img/code.png" alt="ligne de code HTML">
+                        <a href="#" id="dev" title="liens vers développement.html">En savoir plus</a>
+                     </figure>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="#mention Légales" title=" Mentions légales du site">Mention légales</a>
+                </li>
+                <li>
+                    <a href="#plan du site" title="plan du site My Little Company">Plan du site</a>
+                </li>
+                <li>
+                    Copyright © 2020
+                </li>
+                <li>                           <!-- target="new" Permet d'ouvrir un nouvel onglet au lieu de changer la page -->
+                    <a href="https://www.adrar-formation.com/" target="new" title="Liens vers le site officiel de l'Adrar">Adrar Formation</a>
+                </li>
+            </ul>  
+        </footer>
+
+    </div>

@@ -1,0 +1,117 @@
+/**
+* Sélecteur : Blaise fait référence aux balises du HTML
+**/
+body {
+    background-color: rgb(31, 30, 30);
+    margin: .5em; /** Normaliser les marges de body **/
+}
+
+a:visited {
+    text-decoration: none;
+    color:#ffffff;
+    }
+
+h1 {
+    color: greenyellow;
+}
+
+h2, p {
+    color: rgb(255, 255, 255);
+}
+
+aside {
+    color: rgb(255, 255, 255);
+}
+
+article {
+    border: solid 1px greenyellow;
+    padding: 10px;
+    margin: 20px;
+}
+
+.btn {
+    color:black;
+    background-color: grey;
+    transition: background-color .5s .0s ease-out;  /** permet de ralentir le changement de couleur sur les boutons/liens **/
+    margin: 10px;
+    border-radius: 0.5em;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {               /** Hover permet de changer la couleur du lien quand on passe la sourie dessus **/
+    background-color: greenyellow;
+}
+
+
+/**
+* Sélecteur : ID commence par le signe #
+**/
+#page-container {   /** Mobile First : conteneur occupe 100% de l'espace disponible **/
+    width: 100%;
+}
+
+@media screen and (min-width: 75em) {  /** Ecran large (>= 1200px) /  75em=75x16px= 1200px **/
+    #page-container {  /** Conteneur occupera 1100px de large et des marges droites et gauches automatiques **/
+        width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+/**
+* Liens dans le pied de page :
+*  - Texte noir,
+*  - Pas de soulignement
+**/
+footer {
+    color: rgb(255, 255, 255);
+}
+
+footer ul li a {
+    color: rgb(150, 149, 149);
+    text-decoration: none;
+}
+
+figure figcaption {
+    position: absolute;
+    color: greenyellow;
+    top: 99.9%;
+    border-top: 3px solid greenyellow;
+    background-color:rgba(63, 63, 63);;
+    height: inherit;
+    width: 633px;
+    transition: top .8s .2s ease-in-out;
+    opacity: 70%;
+}
+
+figure {
+    height: 420px;
+    width: 633px;
+    overflow: hidden;
+    position: relative;
+}
+
+figure:hover figcaption {
+    top:0;
+}
+
+.nopuce {
+    list-style: none;
+}
+
+.btn-menu {
+    color:black;
+    background-color: grey;
+    transition: background-color .5s .0s ease-out;
+    margin: 10px;
+    border-radius: 0.5em;
+    padding: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    width: 15%;
+}
+
+.btn-menu:hover {
+    background-color: greenyellow;
+}
