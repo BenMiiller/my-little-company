@@ -7,25 +7,30 @@
     <meta charset="UTF-8">                                           <!-- "meta" fait partit des balises orphelines -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">   <!-- "User-scalable=no"  Permet d'empécher l'utilisateur de zoomer-->
     <title>My Little Company</title>                                 <!-- Titre dans l'onglet du navigateur -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">             <!-- Lier une feuille de style -->
 
 </head>
 
 <body>                                                               <!-- Contenus visible du document-->
 
-    <div id="page-container">
+    <div class="container">
 
-        <header>                                                     <!-- Entête de la page -->
-            <a href="#" title="Retour à l'acceuil">
-                <img src="img/codev19.jpeg" width="100px" alt="Logo du groupe Dev Web & Mobile">
-            </a>
-                <h1>My Little Company - Société de Services !</h1>               <!-- Titre de niveau 1 (Heading lvl one) -->
-            <p>                                                              <!-- Paragraphe de contenu -->
+        <header class="row">                                                    <!-- Entête de la page -->
+            <div class="logo col-12 col-md-2">
+                <a href="#" title="Retour à l'acceuil">
+                    <img src="img/codev19.jpeg" width="100px" alt="Logo du groupe Dev Web & Mobile">
+                </a>
+            </div>
+
+            <h1 class="col-12 col-md-10">My Little Company - Société de Services !</h1>     <!-- Titre de niveau 1 (Heading lvl one) -->
+
+            <p class="col-12">                                             <!-- Paragraphe de contenu -->
                 <strong>My Little Company</strong> est une <em>socété de services du Numérique.</em>
             </p>
 
             <!-- Navigation dans nos pages et / ou différentes sections du document courant -->
-            <nav>
+            <nav class="col-12">
                 <ul class="nopuce">                             <!-- Collection de lignes i.e conteneur de lignes -->
                     <li class="btn-menu">
                         <a href="#" title="Retour à la page d'acceuil">Acceuil</a>
@@ -39,8 +44,8 @@
         </header>
 
         <main>                              <!-- Contenu principal d'un document -->
-            <section>
-                <article>
+            <section class="row">
+                <article class="col-12 col-md-4">
                     <header>
                         <h2>Développement</h2>
                     </header>
@@ -54,7 +59,7 @@
                      <a href="dev.html" class="btn" title="liens vers développement.html">En savoir plus</a>
                 </article>
 
-                <article>
+                <article class="col-12 col-md-4">
                     <header>
                         <h2>Intégration de solutions</h2>
                     </header>
@@ -62,30 +67,44 @@
                         <a href="solution.html" class="btn" title="liens vers les intégrations de solutions">En savoir plus</a>
                 </article>
 
-                <article>
+                <article class="col-12 col-md-4">
                     <header>
                         <h2>Consulting</h2>
                     </header>
-                        <p>My Little Company mets à votre disposition une armée de consultant en cravate !</p>
+                        <p id="consulting">My Little Company mets à votre disposition une armée de consultant en cravate !</p>
                         <a href="consulting.html" class="btn" title="Liens vers le consulting">En savoir plus</a>
                 </article>
             </section>
 
             <aside>
                 <!-- Formulaire de contact -->
-                <form method="get">
+                <form method="get" class="col-12">
+                    <fieldset>
 
-                    <input type="text" name="lastname-ctrl" placeholder="Votre nom">
-                    <input type="email" name="email-ctrl" placeholder="Votre email">
-                    <input type="text" name="phone-ctrl" placeholder="Votre téléphone">
+                        <label for="name-ctrl">Votre Nom :</label>
+                            <div class="form-group">
+                                <input type="text" name="lastname-ctrl" placeholder="Nom" class="col-12">
+                            </div>
 
-                    <label for="objet-ctrl">
-                        Objet de votre commande :
-                    </label>
+                      <label for="email-ctrl">Votre Email :</label>
+                            <div class="form-group">
+                                <input type="email" name="email-ctrl" placeholder="Email" class="col-12">
+                            </div>
 
-                    <textarea name="objet-ctrl" id="objet-ctrl"></textarea>
+                        <label for="phone-ctrl">Votre Numéro de téléphone :</label>
+                            <div class="form-group">
+                                <input type="text" name="phone-ctrl" placeholder="Mobile" class="col-12">
+                            </div>
+                    
+                        <label for="objet-ctrl">Informations complémentaires :</label>
+                            <div class="form-group">
+                                <textarea name="objet-ctrl" id="objet-ctrl" class="col-12" rows="5"></textarea>
+                            </div>
+                    </fieldset>
 
                     <fieldset>
+                    <div>
+
                         <legend>Un peu plus sur vous...</legend>
 
                         <label for="lead-ctrl">
@@ -98,16 +117,15 @@
                             <option value="2">Réseaux sociaux</option>
                             <option value="3">Autre...</option>
                         </select>
-                    
-                        <label for="subscribe-ctrl">
-                            <input type="checkbox" name="subscribe-ctrl" id="subscribe-ctrl">
-                            Souscrire à la newsletter
-                        </label>
+                    </div>
 
+                    <div>
                         <label>
                             Vous êtes...
                         </label>
+                    </div>
 
+                    <div>
                         <label for="professionnal">
                             <input type="radio" name="whoareyou" value="0" id="professionnal"> Professionnel
                         </label>
@@ -117,11 +135,8 @@
                         <label for="both">
                             <input type="radio" name="whoareyou" value="2" id="both"> Les deux
                         </label>
-
-                        <label for="subjects-ctrl">
-                            Vous êtes intérresés par...
-                        </label>
-
+                    </div>
+                    
                         <select name="subjects-ctrl" multiple size="5">
                             <option value="0">Tout !</option>
                             <option value="1">Rien</option>
@@ -131,6 +146,17 @@
                             <option value="5">Les vacances</option>
                             <option value="6">L'apéro de vendredi</option>
                         </select>
+
+                        <label for="subjects-ctrl">
+                            ...Vous êtes intérresés par
+                        </label>
+                    <div>
+                        <label for="subscribe-ctrl">
+                            <input type="checkbox" name="subscribe-ctrl" id="subscribe-ctrl">
+                            Souscrire à la newsletter
+                        </label>
+                    </div>
+
                     </fieldset>
 
                     <button disabled>
@@ -138,6 +164,7 @@
                     </button>
 
                 </form>
+
                 <!-- Fin du formulaire de contact -->
             </aside>
 
